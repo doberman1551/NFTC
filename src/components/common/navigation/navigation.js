@@ -48,5 +48,6 @@ const LogoContainer=styled.div`
     justify-content: space-between;
     height:90px;
 
-}
+
 `
+
