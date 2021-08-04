@@ -5,7 +5,7 @@ import Img from "gatsby-image"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Container } from "../global"
 import BackgroundImage from "gatsby-background-image"
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+
 import About from "./About"
 
 
@@ -51,7 +51,7 @@ picture, img {
   }
 
   return (
-    <Router>
+   
     <HeaderWrapper id="top">
      
      
@@ -67,7 +67,7 @@ picture, img {
             </Title>
 
             <Subtitle>Be an early explorerd and discover upcoming exciting NFT projects. Get to know the artists. </Subtitle>
-            <Link path='/login' component={About}> <Button> Learn More </Button> </Link>
+            <Link to='' component={About}> <Button> Learn More </Button> </Link>
            
             </Text>
               
@@ -82,7 +82,7 @@ picture, img {
         </ContainerT>
       
     </HeaderWrapper>
-    </Router>
+   
   )
 }
 
