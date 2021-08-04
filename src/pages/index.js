@@ -6,10 +6,10 @@ import Navigation from "../components/common/navigation/navigation"
 
 import Header from "../components/sections/header"
 import About from "../components/sections/About"
-import BioInfo from "../components/sections/BioInfo"
 
 import Footer from "../components/sections/footer"
 import GetStarted from "../components/sections/getstarted"
+import Contact from "../components/sections/Contact"
 
 const IndexPage = () => (
   <Layout>
@@ -17,7 +17,7 @@ const IndexPage = () => (
     <Navigation />
     <Header />
     <About />
-   <BioInfo/>
+   <Contact/>
   </Layout>
 )
 

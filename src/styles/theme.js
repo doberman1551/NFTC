@@ -2,13 +2,13 @@
 
 const theme = {
   font: {
-    primary: `'HK Grotesk Normal'`,
-    secondary: `'HK Grotesk Medium'`,
-    light: `'HK Grotesk Light'`,
+    primary: `'Epilogue-Regular'`,
+    secondary: `'Epilogue-Medium'`,
+    light: `'Epilogue-Light'`,
     normal: `'HK Grotesk Normal'`,
     medium: `'HK Grotesk Medium'`,
     semibold: `'HK Grotesk Semibold'`,
-    bold: `'HK Grotesk Bold'`,
+    bold: `'Epilogue-Bold'`,
     extrabold: `'HK Grotesk Extra Bold'`,
   },
   font_size: {
@@ -23,13 +23,14 @@ const theme = {
   },
 
   color: {
-    primary: "#071435",
-    secondary: "#F2534B", //   #035762"
+    primary: "#222222",
+    secondary: "#2A2A2E", //   #035762"
     accent: "#cca86e",
+
     whiteText:"ffffff",
     background: {
       dark: "#232323",
-      yellow: "#fedc5a",
+      light: "#fffff",
     },
     white: {
       regular: "#ffffff",

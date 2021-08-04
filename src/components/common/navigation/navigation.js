@@ -1,102 +1,52 @@
-import React, { Component } from "react"
-import AnchorLink from "react-anchor-link-smooth-scroll"
-import Scrollspy from "react-scrollspy"
-import { Menu, X } from "react-feather"
+import * as React from "react"
+import PropTypes from "prop-types"
 
-import { Container } from "../../global"
-import {
-  Nav,
-  NavItem,
-  Brand,
-  StyledContainer,
-  NavListWrapper,
-  MobileMenu,
-  Mobile,
-  ActionsContainer,
-} from "./style"
-
-const NAV_ITEMS = [ ""]
-
-export default class Navigation extends Component {
-  state = {
-    mobileMenuOpen: false,
-    hasScrolled: false,
-  }
+import { useStaticQuery} from "gatsby"
+import { graphql } from 'gatsby'
+import styled from 'styled-components'
+import { GatsbyImage } from "gatsby-plugin-image"
 
 
 
+const Navigation = () => {
+const data= useStaticQuery(graphql`
+query Logo{
+file(relativePath: {eq: "logo.png"}) {
+  childImageSharp {
+    gatsbyImageData(layout:CONSTRAINED quality:100 )
+    }
+  
+}
+}
+`)
+
+return(
+<Nav>
+<LogoContainer>
+<GatsbyImage image={data.file.childImageSharp.gatsbyImageData} />
+</LogoContainer>
+</Nav>
+
+)
   
 
-  toggleMobileMenu = () => {
-    this.setState(prevState => ({ mobileMenuOpen: !prevState.mobileMenuOpen }))
-  }
 
-  closeMobileMenu = () => {
-    if (this.state.mobileMenuOpen) {
-      this.setState({ mobileMenuOpen: false })
-    }
-  }
-
-  getNavAnchorLink = item => (
-    <AnchorLink href={`#${item.toLowerCase()}`} onClick={this.closeMobileMenu}>
-      {item}
-    </AnchorLink>
-  )
-
-  getNavList = ({ mobile = false }) => (
-    <NavListWrapper mobile={mobile}>
-      <Scrollspy
-        items={NAV_ITEMS.map(item => item.toLowerCase())}
-        currentClassName="active"
-        mobile={mobile}
-        offset={-64}
-      >
-        {NAV_ITEMS.map(navItem => (
-          <NavItem key={navItem}>{this.getNavAnchorLink(navItem)}</NavItem>
-        ))}
-      </Scrollspy>
-    </NavListWrapper>
-  )
-
-  render() {
-    const { mobileMenuOpen } = this.state
-
-    return (
-      <Nav {...this.props} scrolled={this.state.hasScrolled}>
-        <StyledContainer>
-          <Brand>
-            <Scrollspy offset={-64} item={["top"]} currentClassName="active">
-              <AnchorLink href="#top" onClick={this.closeMobileMenu}>
-                Sapere Aude
-              </AnchorLink>
-            </Scrollspy>
-          </Brand>
-          <Mobile>
-            <button
-              onClick={this.toggleMobileMenu}
-              style={{ color: "black", background: "none" }}
-            >
-              {this.state.mobileMenuOpen ? (
-                <X size={24} alt="close menu" />
-              ) : (
-                <Menu size={24} alt="open menu" />
-              )}
-            </button>
-          </Mobile>
-
-          <Mobile hide>{this.getNavList({})}</Mobile>
-          <ActionsContainer>
-           
-          </ActionsContainer>
-        </StyledContainer>
-        <Mobile>
-          {mobileMenuOpen && (
-            <MobileMenu>
-              <Container>{this.getNavList({ mobile: true })}</Container>
-            </MobileMenu>
-          )}
-        </Mobile>
-      </Nav>
-    )
-  }
 }
+export default Navigation
+
+
+const Nav=styled.nav`
+
+padding:1em 1em;
+
+
+;
+`
+
+const LogoContainer=styled.div`
+   display: flex;
+    justify-content: space-between;
+    height:90px;
+
+}
+`

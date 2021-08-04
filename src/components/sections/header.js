@@ -2,84 +2,132 @@ import React from "react"
 import styled from "styled-components"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Container } from "../global"
+import BackgroundImage from "gatsby-background-image"
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import About from "./About"
 
-const Header = () => {
-  const data= useStaticQuery(graphql`
-  query Bust{
-  file(relativePath: {eq: "bust.png"}) {
-    childImageSharp {
-      gatsbyImageData(layout:CONSTRAINED quality: 100 )
-      }
-    
-  }
-  }
+
+
+
+const Header = (props) => {
+
   
-  `)
+
+
+    const data= useStaticQuery(graphql`
+    query Nft {
+      file(relativePath: {eq: "nft.png"}) {
+        childImageSharp {
+          fluid(webpQuality: 90, quality: 100) {
+            sizes
+            src
+          }
+        }
+      }
+    }
+`)
+
+let StyledImg = styled(props => <Img {...props}/>)`
+perspective: 1500px;
+perspective-origin: left center;
+overflow: visible !important;
+height: 180%;
+width:80%;
+picture, img {
+  transform: rotateY(-25deg) rotateX(15deg);
+  box-shadow: 25px 60px 125px -25px rgba(80,102,144,.1), 16px 40px 75px -40px rgba(0,0,0,.2);
+  border-radius: .625rem;
+  transition: 1s !important;
+  &:hover {
+    transform: rotateY(-35deg) rotateX(15deg);
+  }
+}
+` 
 
   const handleSubmit = event => {
     event.preventDefault()
   }
 
   return (
+    <Router>
     <HeaderWrapper id="top">
-      <Container>
+     
+     
+     <ContainerT>
         <Flex>
+    
+
         <HeaderTextGroup>
           <Text>
-            <h1>
-              Learn
-              <br />
-              from the people who did it before you..
-            </h1>
-            <h2>
-              Newsletter to explore the lessons from historical characters and events and how to apply them in our professional and business life. 
-            </h2>
-           
-          
-            <Button as="a" href="https://sapereaudehq.substack.com/embed">Get Early Access</Button>
+        
+            <Title>
+              Discover the NFTs of Tomorrow.
+            </Title>
+
+            <Subtitle>Be an early explorerd and discover upcoming exciting NFT projects. Get to know the artists. </Subtitle>
+            <Link path='/login' component={About}> <Button> Learn More </Button> </Link>
            
             </Text>
               
           </HeaderTextGroup>
-          <ImageWrapper>
         
-          <GatsbyImage image={data.file.childImageSharp.gatsbyImageData} />
-            <br />
-          </ImageWrapper>
-
+          <StyledImg fluid={data.file.childImageSharp.fluid} objectFit="contain" objectPosition="right top"/>  
+         
+         
           
         </Flex>
-      </Container>
+      
+        </ContainerT>
+      
     </HeaderWrapper>
+    </Router>
   )
 }
 
 export default Header
 
 const HeaderWrapper = styled.header`
-  background-color: #fedc5a;
-  padding: 80px 0 80px 0;
+  background-color: #ffffff;
+  padding: 60px 0 80px 0;
   position: relative;
+  width:100%;
+
   
   @media (max-width: ${props => props.theme.screen.md}) {
   }
+
 `
 const Subtitle = styled.h5`
-  font-size: 16px;
-  color: ${props => props.theme.color.accent};
+  font-size: 24px;
+  
+  color: ${props => props.theme.color.primary};
   letter-spacing: 0px;
   margin-bottom: 16px;
+  padding:16px;
+`
+const Title=styled.h1`
+font-size:52px;
+color:white;
+`
+
+const ContainerT=styled(Container)`
+height:60vh;
+
+display: flex;
+justify-content: center;
+align-items: center; 
+
 `
 
 const HeaderTextGroup = styled.span`
-  margin: 0;
-  padding-top:0rem;
+  
+  padding-right:1rem;
   display: table;
 
 
-  > div {
+   div {
     width: 120%;
     margin-bottom: -4.5%;
 
@@ -104,13 +152,14 @@ const HeaderTextGroup = styled.span`
 `
 
 const Flex = styled.div`
+ 
   display: grid;
   justify-content: space-between;
   align-content: center;
   grid-template-columns: 1fr 1fr;
   @media (max-width: ${props => props.theme.screen.md}) {
     grid-template-columns: 1fr;
-    grid-gap: 64px;
+    grid-gap: 80px;
   }
 `
 
@@ -165,12 +214,16 @@ const HeaderInput = styled.input`
 
 export const Button = styled.button`
   display: inline-block;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 16.5px 33px;
   vertical-align: middle;
   margin:0,auto;
   width: 12rem;
-  background: ${props => props.theme.color.secondary};
+  font-weight: 500;
+  font-size: 14px;
+  color: white;
+  letter-spacing: 1px;
+  background-image: linear-gradient(114.44deg, #0038F5 0%, #9F03FF 100%);
   color: white;
   text-decoration: none;
   &:hover {
@@ -206,5 +259,6 @@ const StyledImage = styled(Img)`
 const Text=styled.span`
  vertical-align:middle;
   display: table-cell;
+  color:white;
 
 `
