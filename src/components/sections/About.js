@@ -53,8 +53,8 @@ const Flex = styled.div`
   color:white;
  justify-content: space-between;
   align-content: center;
-  grid-template-columns: 45% 45%;
-  grid-gap:10%;
+  grid-template-columns:1fr 1fr;
+  grid-gap:32px;
  
  // @media (max-width: ${props => props.theme.screen.md}) {
   //  grid-template-columns: 2fr;
