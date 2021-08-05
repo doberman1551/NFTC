@@ -72,8 +72,8 @@ export const Card = styled.div`
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.05), 0 0px 40px rgba(0, 0, 0, 0.08);
   border-radius: 5px;
   @media (max-width: ${props => props.theme.screen.sm}) {
-    flex: 1 0 auto;
-    mind-width:400px;
+    flex: 1 1 auto;
+    max-width:100%;
   }
   
 
