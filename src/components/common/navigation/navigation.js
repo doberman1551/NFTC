@@ -35,8 +35,8 @@ return(
 export default Navigation
 
 
-const Nav=styled.nav`
-
+const Nav=styled.div`
+max-width:1400px;
 padding:1em 1em;
 
 
@@ -45,7 +45,7 @@ padding:1em 1em;
 
 const LogoContainer=styled.div`
    display: flex;
-    justify-content: space-between;
+    justify-content:center;
     height:90px;
 
 

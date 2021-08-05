@@ -90,7 +90,7 @@ export default Header
 
 const HeaderWrapper = styled.header`
   background-color: #ffffff;
-  padding: 60px 0 80px 0;
+  padding: 32px 0 80px 0;
   position: relative;
   width:100%;
 
