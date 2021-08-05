@@ -10,7 +10,7 @@ const About = () => (
       <Card>
       <CardHeader> For <GreenText>Creators </GreenText> </CardHeader>
           <CardBody>
-          <img src={'../../CreatorsIcon.png'}></img>
+     
             <p>
             Building an NFT that investors find attractive and marketing it to them are the most difficult part. That's why we built a platform to help artist to show off what they are working infront of a community of early-adopters
             </p>
@@ -21,7 +21,7 @@ const About = () => (
       <CardHeader> For <BlueText>Investors</BlueText> </CardHeader>
           <CardBody>
             <p>
-            Discover perspective artists and their works early. Learn abou their story and background. Receive exclusive news, bonuses and launch dates.
+            Discover perspective artists and their works early. Learn about their story and background. Receive exclusive news, bonuses and launch dates.
             </p>
             </CardBody>
 
@@ -76,7 +76,7 @@ export const Card = styled.div`
   border-radius: 5px;
   @media (max-width: ${props => props.theme.screen.sm}) {
     flex: 1 1 1;
-    min-width:240px;
+    min-width:300px;
     margin-bottom:16px;
    
   }
