@@ -72,10 +72,10 @@ picture, img {
             </Text>
               
           </HeaderTextGroup>
-        
+          <ImgContainer>
           <StyledImg fluid={data.file.childImageSharp.fluid} objectFit="contain" objectPosition="right top"/>  
          
-         
+          </ImgContainer>
           
         </Flex>
       
@@ -90,7 +90,7 @@ export default Header
 
 const HeaderWrapper = styled.header`
   background-color: #ffffff;
-  padding: 32px 0 80px 0;
+  padding: 16px 0 120px 0;
   position: relative;
   width:100%;
 
@@ -124,7 +124,7 @@ align-items: center;
 const HeaderTextGroup = styled.span`
   
   padding-right:1rem;
-  display: table;
+  
 
 
    div {
@@ -246,8 +246,10 @@ const ImageWrapper = styled.div`
   }
 `
 
-const StyledImage = styled(Img)`
-  width: 500px;
+const ImgContainer = styled.div`
+margin-top:-3rem;
+padding:0;
+  
   @media (max-width: ${props => props.theme.screen.md}) {
     width: 400px;
   }
@@ -257,8 +259,7 @@ const StyledImage = styled(Img)`
   }
 `
 const Text=styled.span`
- vertical-align:middle;
-  display: table-cell;
+
   color:white;
 
 `
