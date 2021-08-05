@@ -37,7 +37,8 @@ export default Navigation
 
 const Nav=styled.div`
 max-width:1400px;
-padding:1em 1em;
+height:90px;
+padding:16px 16px;
 margin:0 auto;
 
 

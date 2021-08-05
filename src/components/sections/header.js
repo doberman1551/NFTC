@@ -33,7 +33,7 @@ let StyledImg = styled(props => <Img {...props}/>)`
 perspective: 1500px;
 perspective-origin: left center;
 overflow: visible !important;
-height: 180%;
+height: 150%;
 width:80%;
 picture, img {
   transform: rotateY(-25deg) rotateX(15deg);

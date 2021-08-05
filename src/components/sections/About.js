@@ -55,10 +55,8 @@ const Flex = styled.div`
   flex-wrap: wrap;
   padding:0 16px;
  
-  @media (max-width: 800px) {
-  .flex-item-right, .flex-item-left {
-    flex: 100%;
-  }}
+ 
+
  // @media (max-width: ${props => props.theme.screen.md}) {
   //  grid-template-columns: 2fr;
    // grid-gap: 80px;
@@ -74,7 +72,8 @@ export const Card = styled.div`
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.05), 0 0px 40px rgba(0, 0, 0, 0.08);
   border-radius: 5px;
   @media (max-width: ${props => props.theme.screen.sm}) {
-    flex: 1 1 auto;
+    flex: 1 0 auto;
+    mind-width:400px;
   }
   
 
