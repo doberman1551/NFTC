@@ -54,9 +54,9 @@ const Flex = styled.div`
   color:white;
   flex-wrap: wrap;
   padding:0 16px;
- 
- 
-
+  @media (max-width: ${props => props.theme.screen.sm}) {
+   width:100%;
+  }
  // @media (max-width: ${props => props.theme.screen.md}) {
   //  grid-template-columns: 2fr;
    // grid-gap: 80px;
