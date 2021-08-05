@@ -39,11 +39,13 @@ export default About
 const SectionDark=styled(Section)`
 background-color:#0F1320;
 padding:160px;
+width:100%;
 `
 const StyledContainer = styled(Container)`
 display: flex;
 justify-content: center;
 align-items: center; 
+
 
 `
 
@@ -55,7 +57,8 @@ const Flex = styled.div`
   flex-wrap: wrap;
   padding:0 16px;
   @media (max-width: ${props => props.theme.screen.sm}) {
-   width:100%;
+
+    justify-content:center;
   }
  // @media (max-width: ${props => props.theme.screen.md}) {
   //  grid-template-columns: 2fr;
@@ -72,8 +75,10 @@ export const Card = styled.div`
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.05), 0 0px 40px rgba(0, 0, 0, 0.08);
   border-radius: 5px;
   @media (max-width: ${props => props.theme.screen.sm}) {
-    flex: 1 1 auto;
-    max-width:100%;
+    flex: 1 1 1;
+    min-width:240px;
+    margin-bottom:16px;
+   
   }
   
 
