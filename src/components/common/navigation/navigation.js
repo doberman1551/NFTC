@@ -22,9 +22,9 @@ file(relativePath: {eq: "logo.png"}) {
 
 return(
 <Nav>
-<LogoContainer>
+
 <GatsbyImage image={data.file.childImageSharp.gatsbyImageData} />
-</LogoContainer>
+
 </Nav>
 
 )
@@ -38,6 +38,7 @@ export default Navigation
 const Nav=styled.div`
 max-width:1400px;
 padding:1em 1em;
+margin:0 auto;
 
 
 ;

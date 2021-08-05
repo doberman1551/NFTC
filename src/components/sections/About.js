@@ -48,14 +48,17 @@ align-items: center;
 `
 
 const Flex = styled.div`
-  width:100%;
-  display: grid;
+  
+  display: flex;
+   justify-content: space-between;
   color:white;
- justify-content: space-between;
-  align-content: center;
-  grid-template-columns:1fr 1fr;
-  grid-gap:32px;
+  flex-wrap: wrap;
+  padding:0 16px;
  
+  @media (max-width: 800px) {
+  .flex-item-right, .flex-item-left {
+    flex: 100%;
+  }}
  // @media (max-width: ${props => props.theme.screen.md}) {
   //  grid-template-columns: 2fr;
    // grid-gap: 80px;
@@ -64,15 +67,15 @@ const Flex = styled.div`
   `
 
 export const Card = styled.div`
-  overflow: hidden;
+  flex: 0 1 calc(48% - 1em);
   line-height:24px; 
   padding: 0 0;
   background-color:#171B29;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.05), 0 0px 40px rgba(0, 0, 0, 0.08);
   border-radius: 5px;
-  @media (max-width: ${props => props.theme.screen.md}) {
-      margin: 0 16px;
-    }
+  @media (max-width: ${props => props.theme.screen.sm}) {
+    flex: 1 1 auto;
+  }
   
 
 `
