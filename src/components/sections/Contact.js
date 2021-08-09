@@ -25,7 +25,7 @@ const Contact = () => {
           
           <SocialLinks>
           <span>
-          <a href="https://www.linkedin.com/in/dobromirkotsev/">
+          <a href="https://twitter.com/NftCompass/">
           <SiTwitter color="white"/>
           </a>
           &nbsp;</span>
