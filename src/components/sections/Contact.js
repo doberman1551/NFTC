@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from "styled-components"   
-import {FaLinkedinIn} from "@react-icons/all-files/fa/FaLinkedinIn"
+import {SiTwitter} from "@react-icons/all-files/si/SiTwitter"
 import {HiOutlineMail}  from "@react-icons/all-files/hi/HiOutlineMail"
-import {FiTwitter} from "@react-icons/all-files/fi/FiTwitter"
+
 import { Section } from "../global"
 
 
@@ -21,7 +21,20 @@ const Contact = () => {
               <HeaderButton>Early access</HeaderButton>
         </HeaderForm>
         </Flex>
-           
+        <Wrapper>
+          
+          <SocialLinks>
+          <span>
+          <a href="https://www.linkedin.com/in/dobromirkotsev/">
+          <SiTwitter color="white"/>
+          </a>
+          &nbsp;</span>
+           <a href="mailto:dobromir@nftcompass.xyz?Subject=Some%20subject">
+              <HiOutlineMail color="white"/>
+            </a>
+          </SocialLinks>
+        
+          </Wrapper>  
         </StyledSection>
 
               )   
@@ -33,7 +46,7 @@ export default Contact;
 
 const StyledSection=styled(Section)`
 background-color:#0F1320;
-padding:160px;
+padding:40px;
 
 `
 const Flex = styled.div`
@@ -120,8 +133,13 @@ const HeaderButton = styled.button`
   }
 `
 const Title=styled.h2`
-
-
 color:white;
 display: flex;
 justify-content: center;`
+
+
+
+const Wrapper=styled.div`
+padding:16px;
+`
+

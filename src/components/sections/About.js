@@ -51,7 +51,7 @@ export default About
 
 const SectionDark=styled(Section)`
 background-color:#0F1320;
-padding:160px;
+padding:80px 80px;
 width:100%;
 color:white;
 
@@ -107,6 +107,7 @@ export const CardBody = styled.div`
   padding-right: 32px;
   padding-left: 32px;
   opacity: 0.7;
+  font-size:17px;
 `;
 export const CardHeader = styled.h1`
   font-size: 32px;
