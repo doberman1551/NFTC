@@ -13,7 +13,7 @@ const Contact = () => {
     return (
   
       <StyledSection>
-        <Title> Sign-up for early-access(free)</Title>
+        <Title> Sign-up for early-access(Free)</Title>
         <Flex>
         <HeaderForm name="Contact Form" method="POST" data-netlify="true">
         <input type="hidden" name="form-name" value="Contact Form" />
@@ -119,9 +119,9 @@ const HeaderButton = styled.button`
     margin-left: 0;
   }
 `
-const Title=styled.h1`
+const Title=styled.h2`
 
-font-size:32px;
+
 color:white;
 display: flex;
 justify-content: center;`

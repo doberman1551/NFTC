@@ -13,7 +13,12 @@ import About from "./About"
 
 const Header = (props) => {
 
-  
+  const handleScroll=()=> {
+    window.scroll({
+      top: document.body.offsetHeight,
+      left: 0, 
+      behavior: 'smooth',
+    })};
 
 
     const data= useStaticQuery(graphql`
@@ -67,7 +72,7 @@ picture, img {
             </Title>
 
             <Subtitle>Be an early explorerd and discover upcoming exciting NFT projects. Get to know the artists. </Subtitle>
-            <Link to='' component={About}> <Button> Learn More </Button> </Link>
+           <Button onClick={handleScroll}> Learn More </Button>
            
             </Text>
               

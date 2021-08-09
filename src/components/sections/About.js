@@ -5,15 +5,23 @@ import { Section, Container } from "../global"
 
 const About = () => (
   <SectionDark>
+     <Title>What does it mean?</Title>
       <StyledContainer>
+      
+      
       <Flex>
       <Card>
       <CardHeader> For <GreenText>Creators </GreenText> </CardHeader>
           <CardBody>
      
             <p>
-            Building an NFT that investors find attractive and marketing it to them are the most difficult part. That's why we built a platform to help artist to show off what they are working infront of a community of early-adopters
+            Platform to share what you are working on early and attract investors
             </p>
+            <List>
+            <ListItem>Market your work before launch. </ListItem>
+            <ListItem>Build a community of fans and early adopters.</ListItem>
+            <ListItem>Network with investors.</ListItem>
+            </List>
             </CardBody>
 
             </Card>
@@ -21,7 +29,12 @@ const About = () => (
       <CardHeader> For <BlueText>Investors</BlueText> </CardHeader>
           <CardBody>
             <p>
-            Discover perspective artists and their works early. Learn about their story and background. Receive exclusive news, bonuses and launch dates.
+            Place to discover interesting NFT projects early and their creators.
+            <List>
+            <ListItem>Find potential projects early. </ListItem>
+            <ListItem>Learn more about the artists and their motivations.</ListItem>
+            <ListItem>Get special offers.</ListItem>
+            </List>
             </p>
             </CardBody>
 
@@ -40,6 +53,12 @@ const SectionDark=styled(Section)`
 background-color:#0F1320;
 padding:160px;
 width:100%;
+color:white;
+
+`
+const Title=styled.h2`
+ text-align: center;
+ padding:16px;
 `
 const StyledContainer = styled(Container)`
 display: flex;
@@ -76,7 +95,7 @@ export const Card = styled.div`
   border-radius: 5px;
   @media (max-width: ${props => props.theme.screen.sm}) {
     flex: 1 1 1;
-    min-width:300px;
+    min-width:310px;
     margin-bottom:16px;
    
   }
@@ -106,5 +125,14 @@ export const CardHeader = styled.h1`
  text-decoration: underline;
 
  `
+const List=styled.ul`
+   list-style-type: square;
+  padding: 0;
+  margin-left:16px;
 
+`
+const ListItem=styled.li`
+  padding: 5px 10px;
+  
 
+`

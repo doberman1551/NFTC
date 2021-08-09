@@ -4,9 +4,9 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Sapere Aude Newsletter`,
-    description: `Newsletter to combine history and business.`,
-    author: `Dobromir Kotsev`,
+    title: `NFT Compass`,
+    description: `Place to find future NFT projects.`,
+    author: `DK`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
