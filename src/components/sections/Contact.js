@@ -17,7 +17,7 @@ const Contact = () => {
         <Flex>
         <HeaderForm name="Contact Form" method="POST" data-netlify="true">
         <input type="hidden" name="form-name" value="Contact Form" />
-              <HeaderInput placeholder="Your email" />
+              <HeaderInput placeholder="Your email" required type="email" />
               <HeaderButton>Early access</HeaderButton>
         </HeaderForm>
         </Flex>
@@ -67,6 +67,8 @@ const SocialLinks=styled.div`
   margin-top:8px;
 
 `
+
+
 
 const HeaderForm = styled.form`
   display: flex;
