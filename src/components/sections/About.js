@@ -19,7 +19,7 @@ const About = () => (
             </p>
             <List>
             <ListItem>Market your work before launch. </ListItem>
-            <ListItem> Share details and your motivations about the project</ListItem>
+            <ListItem> Share details and your motivations about the project.</ListItem>
             <ListItem>Build a community of fans and early adopters.</ListItem>
             <ListItem>Network with investors.</ListItem>
             </List>
@@ -34,7 +34,7 @@ const About = () => (
             <List>
             <ListItem>Find potential projects early. </ListItem>
             <ListItem>Learn more about the artists and their motivations.</ListItem>
-            <ListItem> Network with the artists</ListItem>              
+            <ListItem>Find links to buy on different platforms</ListItem>              
             <ListItem>Get special offers and drops. </ListItem>
             </List>
             </p>
