@@ -71,7 +71,7 @@ picture, img {
               Discover the NFTs of Tomorrow.
             </Title>
 
-            <Subtitle>Be an early explorer and discover upcoming exciting NFT projects. </Subtitle>
+            <Subtitle>Be an early explorer: discover and share upcoming exciting NFT projects. </Subtitle>
            <Button onClick={handleScroll}> Learn More </Button>
            
             </Text>

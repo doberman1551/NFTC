@@ -33,7 +33,7 @@ const About = () => (
             <List>
             <ListItem>Find potential projects early. </ListItem>
             <ListItem>Learn more about the artists and their motivations.</ListItem>
-            <ListItem>Get special offers.</ListItem>
+            <ListItem>Get special offers and drops. </ListItem>
             </List>
             </p>
             </CardBody>
