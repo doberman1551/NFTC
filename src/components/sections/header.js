@@ -14,8 +14,10 @@ import About from "./About"
 const Header = (props) => {
 
   const handleScroll=()=> {
+    const scrollheight=document.body.offsetHeight/2;
+    console.log(scrollheight)
     window.scroll({
-      top: document.body.offsetHeight,
+      top:scrollheight,
       left: 0, 
       behavior: 'smooth',
     })};
