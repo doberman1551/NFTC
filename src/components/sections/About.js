@@ -42,6 +42,7 @@ const About = () => (
      
       </Flex>
      </StyledContainer>
+    
   </SectionDark>
 )
 
