@@ -15,9 +15,9 @@ const Contact = () => {
       <StyledSection>
         <Title> Sign-up for early-access(Free)</Title>
         <Flex>
-        <HeaderForm name="Contact Form" method="POST" data-netlify="true">
-        <input type="hidden" name="form-name" value="Contact Form" />
-              <HeaderInput placeholder="Your email" required type="email" />
+        <HeaderForm action="https://getform.io/f/cd89d372-41a8-4bcc-b87c-ba8c551e1aa4"  method="POST">
+        
+              <HeaderInput placeholder="Your email" required type="email"  name="email" />
               <HeaderButton type="submit" >Early access</HeaderButton>
         </HeaderForm>
         </Flex>
