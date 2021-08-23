@@ -15,7 +15,7 @@ const About = () => (
           <CardBody>
      
             <p>
-           We do short interviews with creators that successfuly managed to sell their NFTs. Learn about:
+           We do short interviews with artists that successfuly managed to sell their NFTs. Learn about:
             </p>
             <List>
             <ListItem>Their story </ListItem>

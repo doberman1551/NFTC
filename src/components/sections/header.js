@@ -70,10 +70,10 @@ picture, img {
           <Text>
         
             <Title>
-            Discover successful NFT Stories
+            Discover successful NFT Stories.
             </Title>
 
-            <Subtitle> Learn tips from successful NFT creators.<br/>  </Subtitle>
+            <Subtitle> Read short stories and tips from successful NFT creators.<br/>  </Subtitle>
            <Button onClick={handleScroll}> Learn More </Button>
            
             </Text>
