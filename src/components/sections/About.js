@@ -5,28 +5,28 @@ import { Section, Container } from "../global"
 
 const About = () => (
   <SectionDark>
-     <Title>What does it mean?</Title>
+     
       <StyledContainer>
       
       
-      <Flex>
+    
       <Card>
-      <CardHeader> For <GreenText>Creators </GreenText> </CardHeader>
+      <CardHeader> For <GreenText>Creators</GreenText> from <BlueText>Creators</BlueText>  </CardHeader>
           <CardBody>
      
             <p>
-            Platform to share what you are working on early and attract investors
+           We do short interviews with creators that successfuly managed to sell their NFTs. Learn about:
             </p>
             <List>
-            <ListItem>Market your work before launch. </ListItem>
-            <ListItem> Share details and your motivations about the project.</ListItem>
-            <ListItem>Build a community of fans and early adopters.</ListItem>
-            <ListItem>Network with investors.</ListItem>
+            <ListItem>Their story </ListItem>
+            <ListItem> How do they marketed they work</ListItem>
+            <ListItem>Challenges they faced</ListItem>
+            <ListItem>Their advice for other creators.</ListItem>
             </List>
             </CardBody>
 
             </Card>
-            <Card>
+         {/*   <Card>
       <CardHeader> For <BlueText>Investors</BlueText> </CardHeader>
           <CardBody>
             <p>
@@ -35,14 +35,15 @@ const About = () => (
             <ListItem>Find potential projects early. </ListItem>
             <ListItem>Learn more about the artists and their motivations.</ListItem>
             <ListItem>Find links to buy on different platforms</ListItem>              
-            <ListItem>Get special offers and drops. </ListItem>
+            <ListItem>Get special offers and drops. </ListItem> 
             </List>
             </p>
             </CardBody>
 
             </Card>
-     
-      </Flex>
+         */}
+
+ 
      </StyledContainer>
     
   </SectionDark>
